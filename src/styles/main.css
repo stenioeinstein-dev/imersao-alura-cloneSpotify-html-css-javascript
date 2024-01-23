@@ -11,6 +11,6 @@ body {
     height: calc(100% - 16px);
     padding: 8px;
     display: flex;
-    gap: 8px;
+    /* gap: 8px; */
     background: #000;
 }
