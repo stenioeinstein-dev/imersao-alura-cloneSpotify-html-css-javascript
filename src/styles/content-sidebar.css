@@ -10,58 +10,65 @@
 .sidebar_up {
     width: 100%;
     height: auto;
-    background: red;
+    background-color: var(--bg);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.sidebar_up .logo {
+    margin: 20px 0px 0px;
+    padding: 0px 24px;
+    background-color: #121212;
+    display: flex;
+    border-radius: 8px;
 }
 
 .logo>a>img {
     height: 24px;
 }
 
-.sidebar_up .logo {
-    background-color: #121212;
-    display: flex;
-    border-radius: 8px;
-    padding: 16px 0 0 16px;
-}
-
 .sidebar_up .logo img {
     width: 80px;
 }
 
-.sidebar_up {
-    background-color: #121212;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-
 .sidebar_up ul {
     list-style: none;
-    /* margin-top: 20px; */
-    padding: 0px 20px 0px 20px;
+    padding: 8px 12px;
+    margin: 0 !important;
 }
 
 .sidebar_up ul li {
-    padding: 10px 0px;
-}
-
-.sidebar_up ul li a {
-    color: #b3b3b3;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
+    height: 40px;
+    padding: 4px 12px;
     display: flex;
     align-items: center;
 }
 
-.sidebar_up ul li .bx {
-    font-size: 20px;
-    margin-right: 10px;
-    font-weight: 300;
+.sidebar_up ul li a {
+    color: var(--text-sub);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
-.sidebar_up ul li a:hover {
-    color: #ffffff;
+.sidebar_up ul li a svg {
+    width: 24px;
+    height: 24px;
+    font-size: 20px;
+    font-weight: 300;
+    fill: var(--text-sub);
+    border: none;
+    outline: none;
+}
+
+.sidebar_up ul li a:hover,
+.sidebar_up ul li a svg:hover {
+    fill: var(--text-base-light);
+    color: var(--text-base-light);
 }
 
 /* Sidebar DOWN  */
@@ -71,13 +78,13 @@
 }
 
 .library {
-    background-color: #121212;
+    background-color: var(--bg);
     border-radius: 8px;
     display: flex;
     justify-content: space-between;
     min-block-size: 40px;
     padding: 0px 0px;
-    color: #b3b3b3;
+    color: var(--text-sub);
     font-weight: 600;
     height: 100%;
     font-size: 14px;
@@ -86,7 +93,7 @@
 
 .library .library_button {
     margin-right: 10px;
-    color: #b3b3b3;
+    color: var(--text-sub);
     background-color: transparent;
     border: 0px;
     font-size: 1rem;
@@ -96,18 +103,23 @@
     text-decoration: none;
     text-transform: none;
     padding: 20px 10px;
+    width: 100%;
     display: flex;
     align-items: center;
 }
 
 .library .library_button:hover {
-    color: #ffffff;
+    color: var(--text-base-light);
+    fill: var(--text-base-light);
 }
 
-.library .library_button .bx {
+.library .library_button svg {
+    width: 24px;
+    height: 24px;
     font-size: 26px;
     margin-right: 10px;
     font-weight: 300;
+    fill: var(--text-sub);
 }
 
 .library_content {
@@ -116,38 +128,39 @@
     height: 56px;
     padding: 0 8px;
     justify-content: space-between;
-    box-shadow: 0px 4px 25px 0px #000;
+    box-shadow: 0px 4px 10px 0px #000;
     position: sticky;
 }
 
-.library .library_content .bx-plus {
-    margin: 24px 10px;
+.library .library_content>svg {
+    margin: 0px 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 32px;
-    height: 32px;
-    font-size: 20px;
+    padding: 8px;
+    width: 20px;
+    height: 16px;
+    font-size: 14px;
     border-radius: 50rem;
+    fill: var(--text-sub);
 }
 
-.library .library_content .bx-plus:hover{
-   background: #0d0d0d;
+.library .library_content .plus:hover {
+    background: var(--bg);
 }
 
-.library .library_content .bx-plus:hover {
-    color: #ffffff;
+.library .library_content svg:hover {
+    fill: var(--text-base-light);
 }
- 
+
 .playlist-scroll {
     padding: 0 8px;
-    max-height: 170px;
+    max-height: 160px;
     overflow-y: scroll;
 }
 
 ::-webkit-scrollbar {
     width: 1px;
-    /* background: #000000; */
 }
 
 
@@ -197,7 +210,7 @@
     text-transform: none;
     padding: 10px;
     border: 0px;
-    width: 113px;
+    width: auto;
     justify-content: center;
     margin-top: 12px;
 }
@@ -234,11 +247,73 @@
     color: #fff;
     cursor: pointer;
     align-items: center;
-    padding: 8px;
-    width: 170px;
+    padding: 8px 10px;
+    width: auto;
     margin: 8px;
     font-weight: bold;
+    display: flex;
+    gap: 8px;
 }
+
+.languages>.languages_button>svg {
+    width: 16px;
+    height: 16px;
+    fill: #fff;
+}
+
+.disclaimer-premium {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to right, #ae2896, #509bf5);
+    padding: 15px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.disclaimer-premium .text {
+    flex-shrink: 0;
+}
+
+.disclaimer-premium .disclaimer-premium__title {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.disclaimer-premium .disclaimer-premium__subtitle {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.disclaimer-premium button {
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 14px 30px;
+    border: 0px;
+    border-radius: 40px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+#artistList {
+    display: none;
+}
+
+
+
+
+
+
+
+
 
 
 .content_view {
@@ -299,7 +374,7 @@
     width: 364px;
     display: flex;
     align-items: center;
-        justify-content: left;
+    justify-content: left;
 }
 
 .view_nav_input>form>input {
@@ -309,12 +384,12 @@
     background-color: #242424;
     border: 0;
     border-radius: 500px;
-    color: #fff!important;
+    color: #fff !important;
     height: 48px;
     padding: 0 38px;
     text-overflow: ellipsis;
     width: 100%;
-    
+
 }
 
 .view_nav_input>form>div {
@@ -345,24 +420,24 @@
     gap: 32px;
 }
 
-.view_nav .right > button {
+.view_nav .right>button {
     background: transparent;
     outline: none;
     border: none;
 }
 
-.view_nav .right > .subscribe {
+.view_nav .right>.subscribe {
     font-size: 16px;
     font-weight: 600;
     color: #878787;
     cursor: pointer;
 }
 
-.view_nav .right > .subscribe:hover{
+.view_nav .right>.subscribe:hover {
     color: #fff;
 }
 
-.view_nav .right > .login {
+.view_nav .right>.login {
     background: #fff !important;
     border-radius: 50rem;
     font-size: 16px;
@@ -373,7 +448,7 @@
     cursor: pointer;
 }
 
-.view_nav .right > .login:hover {
+.view_nav .right>.login:hover {
     background: #000000 !important;
     color: #fff;
 }
