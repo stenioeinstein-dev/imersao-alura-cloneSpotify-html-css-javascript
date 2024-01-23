@@ -3,7 +3,7 @@ const playlistContainer = document.getElementById("result-playlists");
 const searchInput = document.getElementById("search");
 
 function requestApi(searchTerm) {
-    fetch(`http://localhost:3000/artists?name_like=${searchTerm}`)
+    fetch(`https://zammyrbychyeller.github.io/imersao-alura-cloneSpotify-html-css-javascript/artists?name_like=${searchTerm}`)
         .then((response) => response.json())
         .then((results) => displayResults(results));
 }
